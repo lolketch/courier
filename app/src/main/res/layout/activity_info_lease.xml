@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infoactivity.InfoActivityLease"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:background="#53BF24"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_height="60dp"/>
+    <RelativeLayout
+        android:id="@+id/low_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button2"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/header">
+        <TextView
+            android:id="@+id/cost"
+            android:text="100Р"
+            android:textColor="@color/main_green"
+            android:textSize="25dp"
+            android:drawableRight="@drawable/ic_bag"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_below="@+id/cost"
+            android:text="Ваш заработок за заказ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/second_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button2"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/low_main">
+        <TextView
+            android:id="@+id/description_block"
+            android:text="Детали заказа"
+            android:textStyle="bold"
+            android:textColor="@color/main_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/in_address"
+            android:paddingTop="5dp"
+            android:text="Некрасовская 5"
+            android:textSize="15dp"
+            android:layout_below="@+id/description_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/out_address"
+            android:paddingTop="5dp"
+            android:text="Некрасовская 51"
+            android:textSize="15dp"
+            android:layout_below="@+id/in_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/description"
+            android:paddingTop="5dp"
+            android:text="Хатататата"
+            android:textSize="15dp"
+            android:layout_below="@+id/out_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/second_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_reserv"
+            android:layout_alignParentBottom="true"
+            android:text="СДАТЬ ЗАКАЗ"
+            android:background="#53BF24"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rippleColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/username"-->
+    <!--        android:layout_below="@+id/btn_reserv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"/>-->
+</RelativeLayout>
